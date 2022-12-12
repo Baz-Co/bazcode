@@ -7,8 +7,12 @@ Added Astro Integrations: `npx astro add react`
 - mdx
 - react
 - tailwind
+- image (w/img transformer: sharp)
 
-Each integration has a cooresponding package installed as well, check out the repo's [package.json](./package.json) as the package + version source of truth.
+Each integration has a cooresponding package installed as well, check out the repo's [package.json](./package.json) as the package + version source of truth. Addtional packages of note:
+
+- astro-icon
+- tiny-invariant
 
 Base `./src/layouts/Layout.astro` includes the `GSAP` CDN script:
 
