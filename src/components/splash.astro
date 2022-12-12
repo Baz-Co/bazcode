@@ -1,0 +1,113 @@
+---
+import { Picture } from "@astrojs/image/components";
+import { Icon } from "astro-icon";
+// import astronautImage from "~/assets/astronaut.png";
+// import HeroImage from "~/components/hero-image.astro";
+import Starfield from "../components/Starfield.astro";
+// import GitHubCorner from "./github-corner.astro";
+
+const widths = [450, 800];
+const sizes = "(min-width: 640px) 42vw, 67vw";
+---
+
+<section class="relative h-full bg-black">
+  <Starfield />
+  <!-- <GitHubCorner /> -->
+  <!-- <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
+    <HeroImage />
+  </div> -->
+  <div
+    class="absolute h-full w-full flex flex-col justify-center content-center text-center"
+  >
+    <h1 class="font-mono text-white tracking-tight text-4xl">bazco.de</h1>
+    <p class="font-mono text-yellow-500">
+      a space for exploring, integrating, and showcasing different web
+      technologies and paradigms.
+    </p>
+  </div>
+  <a
+    href="#main"
+    class="absolute text-3xl bottom-6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-yellow-500"
+  >
+    <Icon
+      pack="mdi"
+      name="navigation"
+      height="24px"
+      width="24px"
+      class="rotate-180"
+    />
+  </a>
+  <!-- <div class="relative grid h-full place-items-center sm:grid-cols-2"> -->
+  <!-- <div class="absolute top-1/2 left-1/2 translate-x-1/2 translate-y-1/2">
+        <h1 class="font-mono text-white tracking-tight text-4xl">bazco.de</h1>
+    </div> -->
+  <!-- <div
+        class="gradient-text text-center font-bold tracking-tighter text-8xl font text-white font-mono"
+      >
+        bazco.de
+        <p class="text-yellow-500">Frontend Engineer</p>
+        exploring, integrating, and showcasing different web technologies and paradigms.
+      </div> -->
+  <!-- <h2
+      class="flex flex-col gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end"
+    >
+      <Icon name="logomark" class="h-24 text-white md:h-32" />
+      <div
+        class="gradient-text text-center font-bold tracking-tighter text-8xl font text-white font-mono"
+      >
+        bazco.de
+      </div>
+    </h2> -->
+  <!-- <div
+      id="astronaut"
+      class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
+    >
+      <Picture
+        class="object-cover w-full h-full"
+        src={astronautImage}
+        widths={widths}
+        sizes={sizes}
+        loading="eager"
+        alt="A floating astronaut in a space suit"
+      />
+    </div> -->
+  <!-- </div> -->
+</section>
+
+<noscript>
+  <style>
+    #splash-bg-fallback {
+      display: block;
+    }
+  </style>
+</noscript>
+
+<style>
+  @keyframes float {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+      transform: translate3d(0, 30px, 0);
+    }
+  }
+
+  #astronaut {
+    animation: float linear 2.5s infinite alternate;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #astronaut {
+      @apply animate-none;
+    }
+
+    :global(#starfield) {
+      @apply hidden;
+    }
+
+    #splash-bg-fallback {
+      @apply block;
+    }
+  }
+</style>
