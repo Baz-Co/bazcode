@@ -1,0 +1,12 @@
+---
+const { frontmatter, url } = Astro.props;
+---
+<html>
+  <head>
+    <!-- <meta rel="canonical" href={new URL(url, Astro.site).pathname}> -->
+    <title>BazCo.de: {frontmatter.title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
