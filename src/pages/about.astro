@@ -1,34 +1,5 @@
 ---
+import About from "../components/about.astro";
 ---
 
-<section
-  class="absolute w-full min-h-full bg-black text-white grid grid-cols-3"
->
-  <div class="section col-span-2">Section 1</div>
-  <div class="section min-h-full flex flex-col justify-center content-center">
-    <h1 class="font-mono tracking-tight text-4xl text-gradient">bazco.de</h1>
-    <p class="font-mono text-yellow-500">
-      a space for exploring, integrating, and showcasing different web
-      technologies and paradigms.
-    </p>
-  </div>
-</section>
-
-<style>
-  :root {
-		--accent: 42, 119, 149;
-		--accent-gradient: linear-gradient(90deg, rgb(var(--accent)), rgb(234 179 8));
-	}
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 32%;
-    background-position: 0%;
-  }
-</style>
+<About />
