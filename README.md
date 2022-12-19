@@ -18,6 +18,10 @@ Base `./src/layouts/Layout.astro` includes the `GSAP` CDN script:
 
 `<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>`
 
+UI "sugar" components added to this site include:
+
+- a [Starfield component](./src/components/Starfield.astro) utilizing HTML canvas
+- A [CodeMirror component](./src/components/CodeMirror.jsx) for an embeded website text editor
 
 <hr />
 <hr />

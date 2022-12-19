@@ -1,0 +1,78 @@
+---
+import { Image } from "@astrojs/image/components";
+import astro from "../assets/astro-full-logo-dark.png";
+import tailwindcss from "../assets/tailwindcss.svg";
+---
+
+<section
+  class="absolute w-full min-h-full bg-black text-white grid grid-cols-2"
+>
+  <!-- <div class="section col-span-2 flex flex-col justify-center content-center"> -->
+  <div class="section flex flex-col justify-center items-center">
+    <Image src={astro} width="300" alt="astro logo" />
+    <br />
+    <br />
+    <img width="300" height="100px" src={tailwindcss} alt="tailwindcss logo" />
+  </div>
+  <div class="section min-h-full flex flex-col justify-center content-center">
+    <!-- <h1 class="font-mono tracking-tight text-4xl text-gradient">bazco.de</h1> -->
+    <p class="font-mono text-yellow-500">
+      This website has been built with Astro.
+    </p>
+    <p class="font-mono text-yellow-500">
+      Astro is optimized for building and serving static websites by rendering
+      HTML (+JavaScript) on the server.
+    </p>
+    <p class="font-mono text-yellow-500">
+      Astro also modularizes the websites JS into islands, which are lazy-loaded
+      (i.e. hydrated when in view).
+    </p>
+    <p class="font-mono text-green-500">
+      Astro allows for highly performant content websites like a blog or
+      company's public website.
+    </p>
+    <p class="font-mono text-green-500">
+      Astro also integrates low-level HTML, MDX, JSX, and ATSTRO page processing
+      allowing for integration with JS library components such as React, Angular
+      and Vue. company's public website.
+    </p>
+    <br />
+    <p class="font-mono text-yellow-500">
+      This site is styled using tailwindcss.
+    </p>
+    <p class="font-mono text-yellow-500">
+      Tailwindcss is a "utility-first" css framework providing a consistent
+      application of styling to the websites' components and layout.
+    </p>
+    <p class="font-mono text-yellow-500">
+      Tailwindcss "tree-shakes" (removes unused css) the websites css when built
+      for production.
+    </p>
+    <p class="font-mono text-green-500">
+      Tailwindcss allows for precision website styling; minimized, modularized, and versatile.
+    </p>
+  </div>
+</section>
+
+<style>
+  :root {
+    --accent: 42, 119, 149;
+    --accent-gradient: linear-gradient(
+      90deg,
+      rgb(var(--accent)),
+      rgb(234 179 8)
+    );
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 32%;
+    background-position: 0%;
+  }
+</style>

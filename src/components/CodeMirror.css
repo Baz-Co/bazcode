@@ -1,0 +1,7 @@
+#copyToClipboard {
+    display:none;
+}
+#CodeMirror:hover + #copyToClipboard{
+    display:block;
+    color:green;
+  }
