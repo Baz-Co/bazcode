@@ -4,55 +4,76 @@ import astro from "../assets/astro-full-logo-dark.png";
 import tailwindcss from "../assets/tailwindcss.svg";
 ---
 
-<section
-  class="absolute w-full min-h-full bg-black text-white grid grid-cols-2"
+<div
+  class="max-w-md mx-auto bg-black font-mono text-yellow-500 overflow-hidden md:max-w-7xl"
 >
-  <!-- <div class="section col-span-2 flex flex-col justify-center content-center"> -->
-  <div class="section flex flex-col justify-center items-center">
-    <Image src={astro} width="300" alt="astro logo" />
-    <br />
-    <br />
-    <img width="300" height="100px" src={tailwindcss} alt="tailwindcss logo" />
+  <div class="py-4 md:flex md:my-36">
+    <div class="md:shrink-0">
+      <!-- <img class="h-48 w-full md:h-full md:w-48" src={tailwindcss} alt="Modern building architecture"> -->
+      <Image
+        src={astro}
+        width="300"
+        class="w-full md:w-fit my-8 px-4"
+        alt="astro logo"
+      />
+    </div>
+    <div class="md:pl-4 md:pt-0 my-8 px-2">
+      <p>This website has been built with Astro.</p>
+      <p>
+        Astro is optimized for building and serving static websites by rendering
+        HTML (+JavaScript) on the server.
+      </p>
+      <p>
+        Astro also modularizes the websites JS into islands, which are
+        lazy-loaded (i.e. hydrated when in view).
+      </p>
+      <p class="text-green-500">
+        Astro allows for highly performant content websites like a blog or
+        company's public website.
+      </p>
+      <p class="text-green-500">
+        Astro also integrates low-level HTML, MDX, JSX, and ATSTRO page processing
+        allowing for integration with JS library components such as React, Angular
+        and Vue. company's public website.
+      </p>
+    </div>
+    <!-- <div class="p-8">
+      <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Company retreats</div>
+      <a href="#" class="block mt-1 text-lg leading-tight font-medium text-indigo-500 hover:underline">Incredible accomodation for your team</a>
+      <p class="mt-2 text-slate-500">Looking to take your team away on a retreat to enjoy awesome food and take in some sunshine? We have a list of places to do just that.</p>
+    </div> -->
   </div>
-  <div class="section min-h-full flex flex-col justify-center content-center">
-    <!-- <h1 class="font-mono tracking-tight text-4xl text-gradient">bazco.de</h1> -->
-    <p class="font-mono text-yellow-500">
-      This website has been built with Astro.
-    </p>
-    <p class="font-mono text-yellow-500">
-      Astro is optimized for building and serving static websites by rendering
-      HTML (+JavaScript) on the server.
-    </p>
-    <p class="font-mono text-yellow-500">
-      Astro also modularizes the websites JS into islands, which are lazy-loaded
-      (i.e. hydrated when in view).
-    </p>
-    <p class="font-mono text-green-500">
-      Astro allows for highly performant content websites like a blog or
-      company's public website.
-    </p>
-    <p class="font-mono text-green-500">
-      Astro also integrates low-level HTML, MDX, JSX, and ATSTRO page processing
-      allowing for integration with JS library components such as React, Angular
-      and Vue. company's public website.
-    </p>
-    <br />
-    <p class="font-mono text-yellow-500">
-      This site is styled using tailwindcss.
-    </p>
-    <p class="font-mono text-yellow-500">
-      Tailwindcss is a "utility-first" css framework providing a consistent
-      application of styling to the websites' components and layout.
-    </p>
-    <p class="font-mono text-yellow-500">
-      Tailwindcss "tree-shakes" (removes unused css) the websites css when built
-      for production.
-    </p>
-    <p class="font-mono text-green-500">
-      Tailwindcss allows for precision website styling; minimized, modularized, and versatile.
-    </p>
+<!-- </div>
+<div
+  class="max-w-md mx-auto bg-black font-mono text-yellow-500 overflow-hidden md:max-w-7xl"
+> -->
+  <div class="py-4 md:flex md:my-36">
+    <div class="md:shrink-0">
+      <img
+        src={tailwindcss}
+        class="w-full md:w-300 my-8 px-4"
+        width="300"
+        height="100px"
+        alt="tailwindcss logo"
+      />
+    </div>
+    <div class="md:pl-4 md:pt-0 my-8 px-2">
+      <p>This site is styled using tailwindcss.</p>
+      <p>
+        Tailwindcss is a "utility-first" css framework providing a consistent
+        application of styling to the websites' components and layout.
+      </p>
+      <p>
+        Tailwindcss "tree-shakes" (removes unused css) the websites css when
+        built for production.
+      </p>
+      <p class="text-green-500">
+        Tailwindcss allows for precision website styling; minimized,
+        modularized, and versatile.
+      </p>
+    </div>
   </div>
-</section>
+</div>
 
 <style>
   :root {
