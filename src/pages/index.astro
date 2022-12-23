@@ -1,10 +1,11 @@
 ---
-import Splash from "../components/splash.astro";
-import About from "../components/about.astro";
-
 const { generator, site } = Astro;
 // const image = new URL("social.jpg", site);
-const description = "Personal website of Shehbaz Sherwani for exploring, integrating, and showcasing different web technologies and paradigms.";
+import siteConfig from '../../site.config.mjs';
+const description = "Personal website for exploring, integrating, and showcasing different web technologies and paradigms.";
+
+import Splash from "../components/splash.astro";
+import About from "../components/about.astro";
 ---
 
 <!DOCTYPE html>
@@ -14,9 +15,9 @@ const description = "Personal website of Shehbaz Sherwani for exploring, integra
     <meta name="viewport" content="width=device-width" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <meta name="generator" content={generator} />
-
-    <title>BazCo.de</title>
     <meta name="description" content={description} />
+    <meta name="robots" content={siteConfig.disableIndexing ? 'noindex, nofollow' : 'index, follow'} />
+    <title>BazCo.de</title>
 
     <!-- initialize theme -->
     <script is:inline>

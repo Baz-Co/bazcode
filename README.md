@@ -1,5 +1,19 @@
 # [BazCo.de](https://bazco.de) Source Code
 
+Personal website for exploring, integrating, and showcasing different web technologies and paradigms.
+
+<details>
+    <summary>Why?</summary>
+
+When learning, there is no replacement for doing. 
+
+And a wonderful aspect of software development is once you've done something - it is always done and can be referenced and enhanced.
+
+This website+repo serve as a sandbox, archive, toolbox, and showcase.
+</details>
+
+---
+
 Bootstrapped with `create-astro`: `npm create astro`
 
 Added Astro Integrations: `npx astro add react`
@@ -8,6 +22,8 @@ Added Astro Integrations: `npx astro add react`
 - react
 - tailwind
 - image (w/img transformer: sharp)
+- sitemap (inactive)
+- astro-robots-txt
 
 Each integration has a cooresponding package installed as well, check out the repo's [package.json](./package.json) as the package + version source of truth. Addtional packages of note:
 
