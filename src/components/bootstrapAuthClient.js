@@ -5,7 +5,7 @@ window.onload = async () => {
       clientId: "FokQe67VIujMi3ynlOOAfUvgXf5eN0bD",
       authorizationParams: {
         // redirect_uri: window.location.origin
-        redirect_uri: "http://localhost:3000/profile",
+        redirect_uri: `${window.location.origin}/profile`,
       },
     })
     .then(async (auth0Client) => {
