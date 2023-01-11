@@ -4,7 +4,6 @@ window.onload = async () => {
       domain: "dev-r7pa8n4k8hvjzdq8.us.auth0.com",
       clientId: "FokQe67VIujMi3ynlOOAfUvgXf5eN0bD",
       authorizationParams: {
-        // redirect_uri: window.location.origin
         redirect_uri: `${window.location.origin}/profile`,
       },
     })
@@ -12,12 +11,12 @@ window.onload = async () => {
       window.aC = auth0Client;
       const isAuthenticated = await auth0Client.isAuthenticated();
       if (isAuthenticated) {
-        if(window.location.pathname === "/login/") {
-          window.location.assign(`${window.location.origin}/profile`);
+        if(window.location.pathname === "/login/" || window.location.pathname === "/login") {
+          window.location.assign(`${window.location.origin}/profile/`);
         }
       } else {
         if(window.location.pathname !== "/login/") {
-          window.location.assign(`${window.location.origin}/login`);
+          window.location.assign(`${window.location.origin}/login/`);
         }
       }
     });

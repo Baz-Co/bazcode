@@ -5,8 +5,7 @@ window.onload = async () => {
         domain: "dev-r7pa8n4k8hvjzdq8.us.auth0.com",
         clientId: "FokQe67VIujMi3ynlOOAfUvgXf5eN0bD",
         authorizationParams: {
-          // redirect_uri: window.location.origin
-          redirect_uri: "http://localhost:3000/profile",
+          redirect_uri: `${window.location.origin}/profile`,
         },
       })
       .then(async (auth0Client) => {
@@ -30,7 +29,7 @@ window.onload = async () => {
                 <img src="${userProfile.picture}" />
               `;
         } else {
-          window.location.assign(`${window.location.origin}/login`);
+          window.location.assign(`${window.location.origin}/login/`);
         }
       });
   }
