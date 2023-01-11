@@ -12,11 +12,11 @@ window.onload = async () => {
       window.aC = auth0Client;
       const isAuthenticated = await auth0Client.isAuthenticated();
       if (isAuthenticated) {
-        if(window.location.pathname === "/login") {
+        if(window.location.pathname === "/login/") {
           window.location.assign(`${window.location.origin}/profile`);
         }
       } else {
-        if(window.location.pathname !== "/login") {
+        if(window.location.pathname !== "/login/") {
           window.location.assign(`${window.location.origin}/login`);
         }
       }
