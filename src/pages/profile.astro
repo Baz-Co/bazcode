@@ -21,7 +21,7 @@
     <main class="absolute w-full min-h-full bg-black text-white">
       <div id="loggedIn" hidden>
         <div id="profile"></div>
-        <button class="border-solid border-2" id="logout" onclick="aC.logout()">Log Out</button>
+        <button class="border-solid border-2" id="logout" onclick="aC.logout({openUrl: () => {window.location.assign(`${window.location.origin}/login/`)}})">Log Out</button>
       </div>
     </main>
     <script src="../components/profile.js"></script>
