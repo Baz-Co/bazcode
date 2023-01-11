@@ -1,0 +1,29 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Login</title>
+    <script async
+      src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"
+    ></script>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="absolute w-full min-h-full bg-black text-white">
+      <div id="loggedIn" hidden>
+        <div id="profile"></div>
+        <button class="border-solid border-2" id="logout" onclick="aC.logout()">Log Out</button>
+      </div>
+    </main>
+    <script src="../components/profile.js"></script>
+  </body>
+</html>
