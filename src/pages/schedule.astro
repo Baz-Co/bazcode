@@ -9,15 +9,34 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>BazCo Schedule</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C2WBGMFF5N"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-C2WBGMFF5N");
+    </script>
     <link
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
     />
   </head>
   <body>
-    <main class="absolute w-full min-h-full bg-black text-white flex align-middle justify-center">
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%2319569A&ctz=America%2FChicago&showTabs=1&showCalendars=0&showPrint=0&src=aTRmZWpyYWttbHU3cTAzZzFtNGIwbzRhMGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23F09300" style="border-width:0; display:block; margin:auto" width="720" height="600" frameborder="0" scrolling="no"></iframe>
+    <main
+      class="absolute w-full min-h-full bg-black text-white flex align-middle justify-center"
+    >
+      <iframe
+        src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%2319569A&ctz=America%2FChicago&showTabs=1&showCalendars=0&showPrint=0&src=aTRmZWpyYWttbHU3cTAzZzFtNGIwbzRhMGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23F09300"
+        style="border-width:0; display:block; margin:auto"
+        width="720"
+        height="600"
+        frameborder="0"
+        scrolling="no"></iframe>
     </main>
   </body>
 </html>
-

@@ -1,8 +1,9 @@
 ---
 const { generator, site } = Astro;
 // const image = new URL("social.jpg", site);
-import siteConfig from '../../site.config.mjs';
-const description = "Personal website for exploring, integrating, and showcasing different web technologies and paradigms.";
+import siteConfig from "../../site.config.mjs";
+const description =
+  "Personal website for exploring, integrating, and showcasing different web technologies and paradigms.";
 
 import Splash from "../components/splash.astro";
 import About from "../components/about.astro";
@@ -16,9 +17,25 @@ import About from "../components/about.astro";
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <meta name="generator" content={generator} />
     <meta name="description" content={description} />
-    <meta name="robots" content={siteConfig.disableIndexing ? 'noindex, nofollow' : 'index, follow'} />
+    <meta
+      name="robots"
+      content={siteConfig.disableIndexing
+        ? "noindex, nofollow"
+        : "index, follow"}
+    />
     <title>BazCo.de</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C2WBGMFF5N"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
+      gtag("config", "G-C2WBGMFF5N");
+    </script>
     <!-- initialize theme -->
     <script is:inline>
       const themeSaved = localStorage.getItem("theme");
@@ -46,20 +63,20 @@ import About from "../components/about.astro";
   <body
     class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
   >
-  <Splash />
-  <main id="main">
-    <About />
-  </main>
+    <Splash />
+    <main id="main">
+      <About />
+    </main>
   </body>
 </html>
 
 <style is:global>
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: black;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+  html {
+    font-family: system-ui, sans-serif;
+    background-color: black;
+  }
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
 </style>
