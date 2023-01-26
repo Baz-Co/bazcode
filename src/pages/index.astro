@@ -71,8 +71,12 @@ import About from "../components/about.astro";
 </html>
 
 <style is:global>
+  @font-face {
+    font-family: OpenDyslexic;
+    src: url("../fonts/OpenDyslexic-Regular.otf") format("opentype");
+  }
   html {
-    font-family: system-ui, sans-serif;
+    font-family: OpenDyslexic, system-ui, sans-serif;
     background-color: black;
   }
   code {

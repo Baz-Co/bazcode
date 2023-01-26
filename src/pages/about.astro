@@ -3,3 +3,43 @@ import About from "../components/about.astro";
 ---
 
 <About />
+<!-- <p>This is a test. Do not turn off your systems. REGULAR</p>
+<p style="color: grey; font-weight: bold;">This is a test. Do not turn off your systems. BOLD</p>
+<p>This is a test. Do not turn off your systems. REGULAR</p>
+<p style="color: grey; font-style: italic;">This is a test. Do not turn off your systems. ITALIC</p>
+<p>This is a test. Do not turn off your systems. REGULAR</p>
+<p style="color: grey; font-weight: bold; font-style: italic;">This is a test. Do not turn off your systems. BOLD ITALIC</p>
+<p>This is a test. Do not turn off your systems. REGULAR</p> -->
+
+<style>
+  @font-face {
+    font-family: OpenDyslexic;
+    src: url("../fonts/OpenDyslexic-Regular.otf") format("opentype");
+  }
+  @font-face {
+    font-family: OpenDyslexic;
+    font-weight: bold;
+    src: url("../fonts/OpenDyslexic-Bold.otf") format("opentype");
+  }
+  @font-face {
+    font-family: OpenDyslexic;
+    font-style: italic;
+    src: url("../fonts/OpenDyslexic-Italic.otf") format("opentype");
+  }
+  @font-face {
+    font-family: OpenDyslexic;
+    font-weight: bold;
+    font-style: italic;
+    src: url("../fonts/OpenDyslexic-BoldItalic.otf") format("opentype");
+  }
+
+  html {
+    font-family: OpenDyslexic, system-ui, sans-serif;
+    background-color: black;
+    color: white
+  }
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+</style>
