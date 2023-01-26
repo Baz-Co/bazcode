@@ -1,0 +1,42 @@
+---
+import LinktreeDisplay from '../../components/LinktreeDisplay.jsx';
+import frontendFrameworks from '../../data/linktree/frontend-framework.json'
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Frontend Frameworks</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C2WBGMFF5N"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-C2WBGMFF5N");
+    </script>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main
+      class="absolute w-full min-h-full bg-black text-white flex flex-col items-center"
+    >
+        <h1>Frontend Frameworks</h1>
+        <LinktreeDisplay client:load list={frontendFrameworks} />
+    </main>
+    <!-- <script>
+        console.log('test')
+    </script> -->
+  </body>
+</html>
