@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 const LinkTreeBranch = ({ item, idx }) => {
   return (
-    <div key={idx} className="rounded-full bg-slate-400 shadow-lg py-4 mb-1 w-full text-center text-black truncate text-truncate">
+    <div key={idx} className="rounded-full shadow-lg py-4 mb-1 w-full text-center text-emerald-900 truncate text-truncate">
       <li key={idx}>
         <a href={item.link} target="blank">{ item.title }</a>
       </li>
