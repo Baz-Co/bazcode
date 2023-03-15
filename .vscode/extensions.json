@@ -1,4 +1,11 @@
 {
-  "recommendations": ["astro-build.astro-vscode"],
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "streetsidesoftware.code-spell-checker",
+    "github.copilot",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss"
+  ],
   "unwantedRecommendations": []
 }
