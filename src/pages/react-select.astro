@@ -1,0 +1,55 @@
+---
+import { Select } from "../components/Select";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>react-select</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C2WBGMFF5N"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-C2WBGMFF5N");
+    </script>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>Select</h1>
+      <Select
+        client:only="react"
+        className="basic-single"
+        classNamePrefix="select"
+        name="items"
+        placeholder="Select an Item"
+        isClearable
+        options={[
+            { value: 'ocean', label: 'Ocean', color: '#00B8D9', isFixed: true },
+            { value: 'blue', label: 'Blue', color: '#0052CC', isDisabled: true },
+            { value: 'purple', label: 'Purple', color: '#5243AA' },
+            { value: 'red', label: 'Red', color: '#FF5630', isFixed: true },
+            { value: 'orange', label: 'Orange', color: '#FF8B00' },
+            { value: 'yellow', label: 'Yellow', color: '#FFC400' },
+            { value: 'green', label: 'Green', color: '#36B37E' },
+            { value: 'forest', label: 'Forest', color: '#00875A' },
+            { value: 'slate', label: 'Slate', color: '#253858' },
+            { value: 'silver', label: 'Silver', color: '#666666' },
+          ]}
+      />
+    </main>
+  </body>
+</html>

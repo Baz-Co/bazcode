@@ -33,7 +33,7 @@ import teamSurveys from '../../data/linktree/team-surveys.json'
       class="absolute w-full min-h-full bg-gradient-to-b from-cyan-300 to-green-600 text-black flex flex-col items-center"
     >
         <h1 class="text-3xl text-emerald-900">Team Surveys</h1>
-        <LinktreeDisplay client:load list={teamSurveys} />
+        <LinktreeDisplay client:only="react" list={teamSurveys} />
     </main>
     <!-- <script>
         console.log('test')
