@@ -1,8 +1,8 @@
 # [BazCo.de](https://bazco.de) Source Code
+[![Netlify Status](https://api.netlify.com/api/v1/badges/857dcf2e-8d2d-480e-b9f5-465481f0a707/deploy-status)](https://app.netlify.com/sites/infallible-mcclintock-d4edd3/deploys)
 
 Personal website for exploring, integrating, and showcasing different web technologies and paradigms.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/857dcf2e-8d2d-480e-b9f5-465481f0a707/deploy-status)](https://app.netlify.com/sites/infallible-mcclintock-d4edd3/deploys)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=577475091)
 
 <details>
@@ -45,9 +45,14 @@ UI "sugar" components added to this site include:
 - [OAuth 2.0](./src/pages/login.astro) Login utilizing Auth0
 - integrated ['react-select' component](./src/components/Select.jsx)
 
-## 🚀 Project Structure
+<details>
+    <summary>🚀 Project Structure</summary>
 
-Inside of your Astro project, you'll see the following folders and files:
+This repo follows the same initial layout of the Astro template project.
+
+- `src/components` - Mostly React components (also where we link components to third-party libraries)
+- `data/` - Data Models and Mock Data files
+- `pages/` - Views for the Project
 
 ```
 /
@@ -65,15 +70,29 @@ Inside of your Astro project, you'll see the following folders and files:
 │   │   └── Starfield.astro
 │   ├── data/linktree
 │   │   ├── frontend-framework.json
+│   │   ├── graphql.json
 │   │   └── team-surveys.json
 │   ├── fonts
 │   │   └── OpenDyslexic.otf
 │   ├── layouts/
 │   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── pages/
+│   │   ├── lt/
+│   │   │   ├── index.astro
+│   │   │   ├── frontend-frameworks.astro
+│   │   │   └── team-surveys.astro
+│   │   ├── index.astro
+│   │   ├── about.astro
+│   │   └── login.astro
+├── package.json
+├── README.md
+├── astro.config.mjs
+├── robot-txt.config.mjs
+├── tailwind.config.js
+└── tsconfig.json
+
 ```
+</details>
 
 <hr />
 <hr />
