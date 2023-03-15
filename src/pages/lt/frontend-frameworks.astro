@@ -33,7 +33,7 @@ import frontendFrameworks from '../../data/linktree/frontend-framework.json'
       class="absolute w-full min-h-full bg-gradient-to-b from-cyan-300 to-green-600 text-black flex flex-col items-center"
     >
         <h1 class="text-3xl text-emerald-900">Frontend Frameworks</h1>
-        <LinktreeDisplay client:load list={frontendFrameworks} />
+        <LinktreeDisplay client:only="react" list={frontendFrameworks} />
     </main>
     <!-- <script>
         console.log('test')
