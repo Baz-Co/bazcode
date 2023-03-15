@@ -2,19 +2,23 @@
 
 Personal website for exploring, integrating, and showcasing different web technologies and paradigms.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/857dcf2e-8d2d-480e-b9f5-465481f0a707/deploy-status)](https://app.netlify.com/sites/infallible-mcclintock-d4edd3/deploys)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=577475091)
+
 <details>
     <summary>Why?</summary>
 
-When learning, there is no replacement for doing. 
+When learning, there is no replacement for doing.
 
 And a wonderful aspect of software development is once you've done something - it is always done and can be referenced and enhanced.
 
 This website+repo serve as a sandbox, archive, toolbox, and showcase.
+
 </details>
 
 ---
 
-Bootstrapped with `create-astro`: `npm create astro`
+[Astro](https://astro.build): Bootstrapped with `create-astro`: `npx create astro`
 
 Added Astro Integrations: `npx astro add react`
 
@@ -25,7 +29,7 @@ Added Astro Integrations: `npx astro add react`
 - sitemap (inactive)
 - astro-robots-txt
 
-Each integration has a cooresponding package installed as well, check out the repo's [package.json](./package.json) as the package + version source of truth. Addtional packages of note:
+Each integration has a corresponding package installed as well, check out the repo's [package.json](./package.json) as the package + version source of truth. Additional packages of note:
 
 - astro-icon
 - tiny-invariant
@@ -37,7 +41,39 @@ Base `./src/layouts/Layout.astro` includes the `GSAP` CDN script:
 UI "sugar" components added to this site include:
 
 - a [Starfield component](./src/components/Starfield.astro) utilizing HTML canvas
-- A [CodeMirror component](./src/components/CodeMirror.jsx) for an embeded website text editor
+- A [CodeMirror component](./src/components/CodeMirror.jsx) for an embedded website text editor
+- [OAuth 2.0](./src/pages/login.astro) Login utilizing Auth0
+- integrated ['react-select' component](./src/components/Select.jsx)
+
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```
+/
+├── public/
+│   └── favicon.ico
+├── src/
+│   ├── assets/
+│   │   ├── astro-full-logo-dark.png
+│   │   └── tailwindcss.svg
+│   ├── components/
+│   │   ├── about.astro
+│   │   ├── CodeMirror.jsx
+│   │   ├── LinktreeDisplay.jsx
+│   │   ├── Select.jsx
+│   │   └── Starfield.astro
+│   ├── data/linktree
+│   │   ├── frontend-framework.json
+│   │   └── team-surveys.json
+│   ├── fonts
+│   │   └── OpenDyslexic.otf
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
 <hr />
 <hr />
@@ -51,7 +87,6 @@ UI "sugar" components added to this site include:
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
 ![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
-
 
 ## 🚀 Project Structure
 
