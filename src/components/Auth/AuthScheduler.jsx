@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Auth0Provider, useAuth0 } from "@auth0/auth0-react";
+import { Auth0Provider } from "@auth0/auth0-react";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import LockedUntilAuthProviderInitialized from "./LockedUntilAuthProviderInitialized.jsx";
 import LockedUntilLoggedIn from "./LockedUntilLoggedIn.jsx";
@@ -21,7 +21,6 @@ export default function AuthScheduler() {
 }
 
 export function CalComComponent() {
-  const { isAuthenticated, loginWithRedirect } = useAuth0();
   useEffect(() => {
     (async function () {
       const cal = await getCalApi();

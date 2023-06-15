@@ -27,7 +27,7 @@ window.onload = async () => {
           profileElement.hidden = false;
           profileElement.innerHTML = `
                 <p>${userProfile.name}</p>
-                <img class="place-self-center mx-auto" src="${userProfile.picture}" />
+                <img class="mx-auto" src="${userProfile.picture}" />
               `;
         } else {
           window.location.assign(`${window.location.origin}/login/`);
