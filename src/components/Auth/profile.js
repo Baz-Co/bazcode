@@ -24,9 +24,10 @@ window.onload = async () => {
           const loggedInElement = document.getElementById("loggedIn");
           loggedInElement.hidden = false;
           const profileElement = document.getElementById("profile");
+          profileElement.hidden = false;
           profileElement.innerHTML = `
                 <p>${userProfile.name}</p>
-                <img src="${userProfile.picture}" />
+                <img class="place-self-center mx-auto" src="${userProfile.picture}" />
               `;
         } else {
           window.location.assign(`${window.location.origin}/login/`);

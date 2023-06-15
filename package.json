@@ -12,6 +12,8 @@
     "reset": "rm -rf node_modules && rm -rf dist && rm -f package-lock.json"
   },
   "dependencies": {
+    "@auth0/auth0-react": "^2.1.1",
+    "@calcom/embed-react": "^1.1.1",
     "@codemirror/commands": "^6.1.2",
     "@codemirror/lang-markdown": "^6.0.5",
     "@codemirror/language-data": "^6.1.0",
