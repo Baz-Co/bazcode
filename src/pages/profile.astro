@@ -30,12 +30,13 @@
     />
   </head>
   <body>
-    <main class="absolute w-full min-h-full bg-black text-white">
-      <div id="loggedIn" hidden>
-        <div id="profile"></div>
-        <button class="border-solid border-2" id="logout" onclick="aC.logout({openUrl: () => {window.location.assign(`${window.location.origin}/login/`)}})">Log Out</button>
+    <main class="absolute w-full min-h-full bg-black text-white flex-col items-center">
+      <div id="loggedIn" class="flex flex-col items-center justify-items-center space-x-4" hidden>
+        <div id="profile" class="border-solid border-2 px-8 py-4 rounded-lg m-4" hidden></div>
+        <p class="mb-2"><a href="/schedule"><button class="border-solid border-2  w-20" id="schedule">Schedule </button></a> some time to chat with Bazco.de</p>
+        <button class="border-solid border-2 w-20" id="logout" onclick="aC.logout({openUrl: () => {window.location.assign(`${window.location.origin}/login/`)}})">Log Out</button>
       </div>
     </main>
-    <script src="../components/profile.js"></script>
+    <script src="../components/Auth/profile.js"></script>
   </body>
 </html>
