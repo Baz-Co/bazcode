@@ -21,6 +21,7 @@
     "@uiw/react-codemirror": "^4.19.4",
     "astro": "^1.6.14",
     "astro-icon": "^0.8.0",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-select": "^5.7.0",
