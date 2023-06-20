@@ -1,33 +1,29 @@
 ---
-import { Picture } from "@astrojs/image/components";
 import { Icon } from "astro-icon";
-// import astronautImage from "~/assets/astronaut.png";
-// import HeroImage from "~/components/hero-image.astro";
 import Starfield from "../components/Starfield.astro";
-// import GitHubCorner from "./github-corner.astro";
-
-const widths = [450, 800];
-const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
 
-<section class="relative h-full bg-black">
+<section id="splash-bg-fallback" class="relative h-full bg-black">
   <Starfield />
-  <!-- <GitHubCorner /> -->
-  <!-- <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
-    <HeroImage />
-  </div> -->
   <div
+    id="slightMovement"
     class="absolute h-full w-full flex flex-col justify-center content-center text-center"
   >
-    <h1 class="font-mono text-white tracking-tight text-4xl">bazco.de</h1>
-    <p class="font-mono text-yellow-500">
+    <h1 class="text-yellow-300 font-mono tracking-tight text-5xl">
+      <span class="text-gradient">b</span><span class="text-gradient">a</span>z<span
+        class="text-gradient">c</span
+      ><span class="text-gradient">o</span>.<span class="text-gradient">d</span><span
+        class="text-gradient">e</span>
+    </h1>
+    <p class="font-mono text-cyan-600">
       a space for exploring, integrating, and showcasing different web
       technologies and paradigms.
     </p>
   </div>
   <a
     href="#main"
-    class="absolute text-3xl bottom-6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-yellow-500"
+    class="absolute text-3xl bottom-6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-700 drop-shadow-2xl shadow-cyan-100"
+    aria-label="Scroll down to main content"
   >
     <Icon
       pack="mdi"
@@ -37,69 +33,92 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
       class="rotate-180"
     />
   </a>
-  <a href="https://github.com/Baz-Co/far-field" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
-  <!-- <div class="relative grid h-full place-items-center sm:grid-cols-2"> -->
-  <!-- <div class="absolute top-1/2 left-1/2 translate-x-1/2 translate-y-1/2">
-        <h1 class="font-mono text-white tracking-tight text-4xl">bazco.de</h1>
-    </div> -->
-  <!-- <div
-        class="gradient-text text-center font-bold tracking-tighter text-8xl font text-white font-mono"
-      >
-        bazco.de
-        <p class="text-yellow-500">Frontend Engineer</p>
-        exploring, integrating, and showcasing different web technologies and paradigms.
-      </div> -->
-  <!-- <h2
-      class="flex flex-col gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end"
-    >
-      <Icon name="logomark" class="h-24 text-white md:h-32" />
-      <div
-        class="gradient-text text-center font-bold tracking-tighter text-8xl font text-white font-mono"
-      >
-        bazco.de
-      </div>
-    </h2> -->
-  <!-- <div
-      id="astronaut"
-      class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
-    >
-      <Picture
-        class="object-cover w-full h-full"
-        src={astronautImage}
-        widths={widths}
-        sizes={sizes}
-        loading="eager"
-        alt="A floating astronaut in a space suit"
-      />
-    </div> -->
-  <!-- </div> -->
+  <a
+    href="https://github.com/Baz-Co/far-field"
+    class="github-corner"
+    aria-label="View source on GitHub"
+  >
+    <svg
+      width="80"
+      height="80"
+      viewBox="0 0 250 250"
+      style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;"
+      aria-hidden="true"
+      ><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path
+        d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+        fill="currentColor"
+        style="transform-origin: 130px 106px;"
+        class="octo-arm"></path><path
+        d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+        fill="currentColor"
+        class="octo-body"></path>
+    </svg>
+  </a>
 </section>
 
-<noscript>
-  <style>
-    #splash-bg-fallback {
-      display: block;
-    }
-  </style>
-</noscript>
-
 <style>
+  .text-gradient {
+    background: radial-gradient(
+        circle at 45.4% 55%,
+        red 0%,
+        yellow 2%,
+        orange 5%
+      ),
+      radial-gradient(circle at 49.5% 54.5%, red 0%, yellow 4%, orange 5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<style>
+  /* GITHUB CORNER */
+  .github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+  @keyframes octocat-wave {
+    0%,
+    100% {
+      transform: rotate(0);
+    }
+    20%,
+    60% {
+      transform: rotate(-25deg);
+    }
+    40%,
+    80% {
+      transform: rotate(10deg);
+    }
+  }
+  @media (max-width: 500px) {
+    .github-corner:hover .octo-arm {
+      animation: none;
+    }
+    .github-corner .octo-arm {
+      animation: octocat-wave 560ms ease-in-out;
+    }
+  }
+</style>
+<style>
+  /* ANIMATIONS */
   @keyframes float {
     0% {
       transform: translate3d(0, 0, 0);
     }
-
+    25% {
+      transform: translate3d(7px, 0, 5px);
+    }
+    50% {
+      transform: translate3d(-2px, -15px, 0);
+    }
     100% {
-      transform: translate3d(0, 30px, 0);
+      transform: translate3d(0, 0, 0);
     }
   }
-
-  #astronaut {
-    animation: float linear 2.5s infinite alternate;
+  #slightMovement {
+    animation: 7s 1 alternate float;
   }
 
   @media (prefers-reduced-motion: reduce) {
-    #astronaut {
+    #slightMovement {
       @apply animate-none;
     }
 
@@ -112,3 +131,11 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
     }
   }
 </style>
+
+<noscript>
+  <style>
+    #splash-bg-fallback {
+      display: block;
+    }
+  </style>
+</noscript>

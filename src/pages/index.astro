@@ -1,5 +1,6 @@
 ---
 const { generator, site } = Astro;
+import { Icon } from "astro-icon";
 // const image = new URL("social.jpg", site);
 import siteConfig from "../../site.config.mjs";
 const description =
@@ -7,6 +8,7 @@ const description =
 
 import Splash from "../components/splash.astro";
 import About from "../components/about.astro";
+import SideHandle from "../components/SideHandle.jsx";
 ---
 
 <!DOCTYPE html>
@@ -68,6 +70,18 @@ import About from "../components/about.astro";
       <About />
     </main>
   </body>
+  <SideHandle>
+    <a href="login.html"
+      ><h4 class="text-xl text-grey-900 font-bold py-2">
+        <Icon pack="mdi" name="user" height="24px" width="24px" />
+      </h4></a
+    >
+    <a href="lt.html"
+      ><h4 class="text-xl text-grey-900 font-bold py-2">
+        <Icon pack="mdi" name="forest" height="24px" width="24px" />
+      </h4></a
+    >
+  </SideHandle>
 </html>
 
 <style is:global>
@@ -82,5 +96,27 @@ import About from "../components/about.astro";
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #0f172a;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.14, rgb(122, 153, 217)),
+      color-stop(0.72, #38bdf8),
+      color-stop(0.86, #075985)
+    );
   }
 </style>
